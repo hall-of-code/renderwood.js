@@ -1,5 +1,5 @@
 # Renderwood.js
-Renderwood.js is a small rendering Module for nodeJS, to render HTML in (for example:) Express.js linke .blade.php in Laravel.
+Renderwood.js is a small rendering Module for nodeJS, to render HTML in (for example:) Express.js like .blade.php in PHP's Laravel.
 
 **webapp.js**
 ```
@@ -9,7 +9,7 @@ var app = express();
 
 app.get('/', function (req, res) {
   var test = "Hello World!";
-  res.send(renderwood("index.html", {"test": test}));
+  res.send(renderwood("index.rw.html", {"test": test}));
 });
 
 app.listen(3000, function () {
@@ -17,7 +17,7 @@ app.listen(3000, function () {
 });
 ```
 
-**index.html**
+**index.rw.html**
 ```
 <!DOCTYPE: html>
 <html>
@@ -29,5 +29,15 @@ app.listen(3000, function () {
 </body>
 </html>
 ```
+
+**Basic Usage:**
+
+``renderwood(<html>, <data>);`` in NodeJS.
+---
+``@usehere: header.html;;`` = Include HTML from other File here.
+``@useCSS: style.css ;;`` = Include CSS-File.
+``{{ variable }}`` = Get passed Variable in HTML.
+``@foreach: x of object ;;`` =  
+
 
 

@@ -33,11 +33,25 @@ app.listen(3000, function () {
 **Basic Usage:**
 
 ``renderwood(<html>, <data>);`` in NodeJS.
----
+
 ``@usehere: header.html;;`` = Include HTML from other File here.
+
 ``@useCSS: style.css ;;`` = Include CSS-File.
+
 ``{{ variable }}`` = Get passed Variable in HTML.
-``@foreach: x of object ;;`` =  
+
+```
+@foreach: item of object ;;
+<p>{{ item[0] }} </p>
+<button>{{ item[1] }} </button>
+@endforeach;;
+``` 
+
+```
+@for: item in array ;;
+<p> {{ item }} </p>
+@endfor ;;
+```
 
 
 
